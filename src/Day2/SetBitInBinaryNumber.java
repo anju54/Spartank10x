@@ -16,9 +16,19 @@ public class SetBitInBinaryNumber {
         }
     }
 
+    // Optimized method
+    public static void checkSetBit1(int number,int k){
+        int res = number >> (k-1);
+        if(res == 1)
+            System.out.println("SET");
+        else
+            System.out.println("UNSET");
+    }
+
     public static void main(String[] args) {
-        int number = 75;
-        int k = 4;
-        checkSetBit(number,k);
+        int number = 5;
+        int k = 3;
+        //checkSetBit(number,k);
+        checkSetBit1(number,k);
     }
 }

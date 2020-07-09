@@ -1,5 +1,7 @@
 package Day2;
 
+import java.util.Scanner;
+
 public class PowerOfTwo {
 
     public static boolean isPowerOfTwo(int num){
@@ -19,9 +21,20 @@ public class PowerOfTwo {
         return true;
     }
 
+    // Optimized approach
+    public static boolean isPowerOfTwo1(int num){
+
+        int res = num & ( num-1);
+        if(res==0)
+            return true;
+        else
+            return false;
+    }
+
     public static void main(String[] args) {
 
-        int num = 8;
-        System.out.println( isPowerOfTwo(num) );
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        System.out.println( isPowerOfTwo1(num) );
     }
 }
